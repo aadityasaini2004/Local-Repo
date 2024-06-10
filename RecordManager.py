@@ -1,13 +1,49 @@
 import pickle
 
 def AddRec():
-    pass
+    ch = "Y"
+    while ch == "Y" or ch == "y":
+        i=int(input("Enter Student_id "))
+        n=input("Enter Student_name ")
+        m=int(input("Enter Student_marks "))
+        rec=[i,n,m]
+        f=open("Student.dat",'ab')
+        pickle.dump(rec,f)
+        ch = input("Do You wish to Enter more Records (Y/N) ")
+        if ch == "Nn":
+            break
+        f.close()
+        
 
 def DisplayRec():
-    pass
+    f=open("Student.dat" , "rb")
+    while True:
+        try:
+            rec=pickle.load(f)
+            for i in rec:
+                print(i,end=" ")
+            print()
+        except EOFError:
+            break
+    f.close()
 
-def SearchRec():
-    pass
+def SearchRec(): 
+    r=int(input("Enter Student_id to search "))
+    f=open("Student.dat" , "rb")
+    flag = False
+    while True:
+        try:
+            rec=pickle.load(f)
+            for i in rec:
+                if i[0]==r:
+                    print("Record Found-> ", i)
+                    flag = True
+        except EOFError:
+            break
+    if flag == False:
+        print("No File Found!")
+    f.close()
+    
 
 while True:
     print("Main_Menu")
