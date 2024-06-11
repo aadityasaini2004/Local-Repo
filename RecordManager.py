@@ -43,7 +43,9 @@ def SearchRec():
     if flag == False:
         print("No File Found!")
     f.close()
-    
+
+def deleteRec():
+    pass
 
 while True:
     print("Main_Menu")
