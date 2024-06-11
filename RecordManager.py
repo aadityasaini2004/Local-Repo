@@ -50,7 +50,7 @@ while True:
     print("1-AddRec")
     print("2-DisplayRec")
     print("3-SearchRec")
-    print("Enter Your choice ")
+    print("4-Exit")
     choice = int(input("Enter your choice "))
     if choice == 1:
         AddRec()
