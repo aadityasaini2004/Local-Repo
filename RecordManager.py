@@ -44,7 +44,10 @@ def SearchRec():
         print("No File Found!")
     f.close()
 
+
 def deleteRec():
+    pass
+def updateRec():
     pass
 
 while True:
@@ -65,4 +68,5 @@ while True:
         exit()
     else:
         print("Error!")
+        
     
