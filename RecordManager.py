@@ -44,6 +44,8 @@ def SearchRec():
         print("No File Found!")
     f.close()
     
+def updateRec():
+    pass
 
 while True:
     print("Main_Menu")
@@ -63,4 +65,5 @@ while True:
         exit()
     else:
         print("Error!")
+        
     
